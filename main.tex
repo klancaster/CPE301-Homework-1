@@ -1,0 +1,129 @@
+\input{settings} % add packages, settings, and declarations in settings.tex
+
+\begin{document}
+
+\lhead{CPE 301 Homework \#1} 
+\rhead{CSE Department, UNR} 
+\cfoot{\thepage\ of \pageref{LastPage}}
+
+\noindent\textbf{Student Name:} \rule{8cm}{1pt} 
+
+\noindent\textbf{Lab Section \#:} \rule{3cm}{1pt}
+
+\emph{
+You must show your work for each problem. Simply looking up the answer on the Interwebs is not sufficient for credit!
+}
+
+\section*{Introduction}
+This homework is designed to help you get familiar with using pointers. Pointer manipulation is an integral part of programming microcontrollers.
+
+\section*{Problems}
+\begin{enumerate}
+    \item Write declaration statements (for Atmega2560 volatile data) for the following.
+    \begin{enumerate}
+        \item The variable pointed to by \texttt{y\_addr} is an integer.
+        \item The variable pointed to by \texttt{y\_addr} is a character.
+        \item The variable pointed to by \texttt{ch\_addr} is an unsigned character.
+        \item The variable pointed to by \texttt{z} is an integer.
+        \item \texttt{date\_pt} is a pointer to an integer.
+        \item \texttt{pt\_chr} is a pointer to an unsigned character.
+    \end{enumerate}
+    \item For the following variable declarations, 
+        \begin{verbatim}
+        int *x_pt; 
+        long *y_addr; 
+        long *dt_addr;
+        long *pt_addr;
+        double *pt_z; 
+        int a; 
+        long b; 
+        double c;
+        \end{verbatim}
+
+    determine which of the following statements is valid.
+    \begin{enumerate}
+        \item y\_addr = \&a;
+        
+        \item y\_addr = a;
+        
+        \item dt\_addr = \&a;
+        
+        \item dt\_addr = a;
+        
+        \item pt\_z = \&a;
+        
+        \item pt\_addr = a;
+        
+        \item y\_addr = x\_pt;
+        
+        \item y\_addr = \&b;
+        
+        \item y\_addr = b;
+        
+        \item dt\_addr = \&b;
+        
+        \item dt\_addr = b;
+        
+        \item pt\_addr = \&b;
+        
+        \item pt\_addr = b;
+        
+        \item y\_addr = dt\_addr;
+        
+        \item y\_addr = \&c;
+        
+        \item y\_addr = c;
+        
+        \item da\_addr = \&c;
+        
+        \item dt\_addr = c;
+        
+        \item pt\_addr = \&c;
+        
+        \item pt\_addr = c;
+        
+        \item y\_addr = pt\_addr;
+    \end{enumerate}
+
+
+
+\item If \texttt{var2} is a variable, what does \texttt{\&var2} mean?
+
+
+\item \label{p} Determine the results of the following operations:
+\begin{enumerate}
+\item 11001010 \& 10100101
+
+\item 11001010 | 10100101
+
+\item 11001010 \^ 10100101
+\end{enumerate}
+
+\item Write the hexadecimal representations of all binary numbers in Question \ref{p}.
+
+\item Determine the binary and hexadecimal results of the following operations, assuming unsigned numbers: 
+\begin{enumerate}
+
+\item the hexadecimal number 0x0157, shifted left by one bit position
+
+\item the hexadecimal number 0x0701, shifted left by two bit positions
+
+\item the hexadecimal number 0x0673, shifted right by two bit positions
+
+\item the hexadecimal number 0x0057, shifted right by three bit positions
+\end{enumerate}
+
+\item The following problems deal with working with bit masks.
+\begin{enumerate}
+    
+\item Define an 8 bit \texttt{mask} that you can use with a binary operator to set the MSB of an 8 bit value to 1, leaving all the other bits as they were. Example: Given 01101101, your mask when applied should result in 11101101. What operation do you need to use with the mask you designed?
+
+\item Determine the hexadecimal value of a mask that can be inclusively ORed with the bit pattern in f1ag to reproduce the fifth and seventh bits of flag and set all other bits to one. Again, consider the rightmost bit of flag to be bit 0.
+
+\item Determine the hexadecimal value of a mask that can be used to complement the values of the first and third bits of f1ag and leave all other bits unchanged. Determine the bit operation that should be used with the mask value to produce the desired result.
+    \end{enumerate}
+\end{enumerate}
+
+    \section*{Notes}
+    Portions of these Questions are modified from: "C++ for Engineers and Scientists" by Gary Bronson, http://www.scs.ryerson.ca/~mth110/Handouts/bitwise.pdf
+\end{document}
